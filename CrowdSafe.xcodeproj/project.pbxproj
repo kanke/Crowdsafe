@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F88A3C9279EC0BA199FF05B /* libPods-CrowdSafe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7815646180F8E886EC98FA5A /* libPods-CrowdSafe.a */; };
+		B120585E1AEC2C0500D70954 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B120585D1AEC2C0400D70954 /* Default-568h@2x.png */; };
 		B17575A21AEBDF2A000C20DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575A11AEBDF2A000C20DC /* main.m */; };
 		B17575A51AEBDF2A000C20DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575A41AEBDF2A000C20DC /* AppDelegate.m */; };
 		B17575A81AEBDF2A000C20DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575A71AEBDF2A000C20DC /* ViewController.m */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0793AC3FC7CF136F58AA327D /* Pods-CrowdSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrowdSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrowdSafe/Pods-CrowdSafe.release.xcconfig"; sourceTree = "<group>"; };
 		7815646180F8E886EC98FA5A /* libPods-CrowdSafe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrowdSafe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B120585D1AEC2C0400D70954 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B175759C1AEBDF2A000C20DC /* CrowdSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17575A01AEBDF2A000C20DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B17575A11AEBDF2A000C20DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		B175759F1AEBDF2A000C20DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B120585D1AEC2C0400D70954 /* Default-568h@2x.png */,
 				B17575A01AEBDF2A000C20DC /* Info.plist */,
 				B17575A11AEBDF2A000C20DC /* main.m */,
 			);
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17575AB1AEBDF2A000C20DC /* Main.storyboard in Resources */,
+				B120585E1AEC2C0500D70954 /* Default-568h@2x.png in Resources */,
 				B17575B01AEBDF2A000C20DC /* LaunchScreen.xib in Resources */,
 				B17575AD1AEBDF2A000C20DC /* Images.xcassets in Resources */,
 			);

@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "MapKit/MapKit.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -18,12 +17,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mapView.showsUserLocation = YES;
+    self.mapView.delegate = self;
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.005;
+    span.longitudeDelta = 0.005;
+    CLLocationCoordinate2D location;
+    location.latitude = aUserLocation.coordinate.latitude;
+    location.longitude = aUserLocation.coordinate.longitude;
+    region.span = span;
+    region.center = location;
+    [aMapView setRegion:region animated:YES];
+
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = aUserLocation.coordinate;
+    point.title = @"70% Full";
+    point.subtitle = @"Cafe Italia";
+
+    [self.mapView addAnnotation:point];
+    [self.mapView selectAnnotation:point animated:NO];
 }
 
 @end
