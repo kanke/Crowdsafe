@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F88A3C9279EC0BA199FF05B /* libPods-CrowdSafe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7815646180F8E886EC98FA5A /* libPods-CrowdSafe.a */; };
 		B17575A21AEBDF2A000C20DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575A11AEBDF2A000C20DC /* main.m */; };
 		B17575A51AEBDF2A000C20DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575A41AEBDF2A000C20DC /* AppDelegate.m */; };
 		B17575A81AEBDF2A000C20DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575A71AEBDF2A000C20DC /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		B17575AD1AEBDF2A000C20DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B17575AC1AEBDF2A000C20DC /* Images.xcassets */; };
 		B17575B01AEBDF2A000C20DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17575AE1AEBDF2A000C20DC /* LaunchScreen.xib */; };
 		B17575BC1AEBDF2B000C20DC /* CrowdSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B17575BB1AEBDF2B000C20DC /* CrowdSafeTests.m */; };
+		B17575C61AEC0E4B000C20DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17575C51AEC0E4A000C20DC /* CoreLocation.framework */; };
+		B17575C81AEC0E52000C20DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17575C71AEC0E52000C20DC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0793AC3FC7CF136F58AA327D /* Pods-CrowdSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrowdSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrowdSafe/Pods-CrowdSafe.release.xcconfig"; sourceTree = "<group>"; };
+		7815646180F8E886EC98FA5A /* libPods-CrowdSafe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrowdSafe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B175759C1AEBDF2A000C20DC /* CrowdSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17575A01AEBDF2A000C20DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B17575A11AEBDF2A000C20DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,9 @@
 		B17575B51AEBDF2B000C20DC /* CrowdSafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdSafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17575BA1AEBDF2B000C20DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B17575BB1AEBDF2B000C20DC /* CrowdSafeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrowdSafeTests.m; sourceTree = "<group>"; };
+		B17575C51AEC0E4A000C20DC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B17575C71AEC0E52000C20DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8A7A97CC1F1FE70243F4221 /* Pods-CrowdSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrowdSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrowdSafe/Pods-CrowdSafe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17575C81AEC0E52000C20DC /* MapKit.framework in Frameworks */,
+				B17575C61AEC0E4B000C20DC /* CoreLocation.framework in Frameworks */,
+				7F88A3C9279EC0BA199FF05B /* libPods-CrowdSafe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +71,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CC692294F720B58BEA1E313 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8A7A97CC1F1FE70243F4221 /* Pods-CrowdSafe.debug.xcconfig */,
+				0793AC3FC7CF136F58AA327D /* Pods-CrowdSafe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8AE622DEF48C7D669BF781E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B17575C71AEC0E52000C20DC /* MapKit.framework */,
+				B17575C51AEC0E4A000C20DC /* CoreLocation.framework */,
+				7815646180F8E886EC98FA5A /* libPods-CrowdSafe.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B17575931AEBDF29000C20DC = {
 			isa = PBXGroup;
 			children = (
 				B175759E1AEBDF2A000C20DC /* CrowdSafe */,
 				B17575B81AEBDF2B000C20DC /* CrowdSafeTests */,
 				B175759D1AEBDF2A000C20DC /* Products */,
+				5CC692294F720B58BEA1E313 /* Pods */,
+				8AE622DEF48C7D669BF781E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B17575BF1AEBDF2B000C20DC /* Build configuration list for PBXNativeTarget "CrowdSafe" */;
 			buildPhases = (
+				F6119A155BC180698F83A8DA /* Check Pods Manifest.lock */,
 				B17575981AEBDF2A000C20DC /* Sources */,
 				B17575991AEBDF2A000C20DC /* Frameworks */,
 				B175759A1AEBDF2A000C20DC /* Resources */,
+				6B007F26A05CCE1BF41FF95D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +247,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B007F26A05CCE1BF41FF95D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrowdSafe/Pods-CrowdSafe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6119A155BC180698F83A8DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B17575981AEBDF2A000C20DC /* Sources */ = {
@@ -341,21 +408,28 @@
 		};
 		B17575C01AEBDF2B000C20DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A7A97CC1F1FE70243F4221 /* Pods-CrowdSafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrowdSafe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2ca3c6d8-d41f-458c-b784-085e00fe492c";
+				"PROVISIONING_PROFILE[sdk=*]" = "914dd024-173c-4645-be8c-2be9c9418f52";
 			};
 			name = Debug;
 		};
 		B17575C11AEBDF2B000C20DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0793AC3FC7CF136F58AA327D /* Pods-CrowdSafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrowdSafe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -412,6 +486,7 @@
 				B17575C11AEBDF2B000C20DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B17575C21AEBDF2B000C20DC /* Build configuration list for PBXNativeTarget "CrowdSafeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +495,7 @@
 				B17575C41AEBDF2B000C20DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

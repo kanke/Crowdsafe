@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F37548C2-11F0-4D0F-9BFB-0C90483BD10E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CrowdSafe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2ED38323409EF9B5081CACF43B560851FF8C1649</key>
+		<string>github.com:kanke/Crowdsafe.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CrowdSafe.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2ED38323409EF9B5081CACF43B560851FF8C1649</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:kanke/Crowdsafe.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2ED38323409EF9B5081CACF43B560851FF8C1649</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2ED38323409EF9B5081CACF43B560851FF8C1649</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CrowdSafe</string>
+		</dict>
+	</array>
+</dict>
+</plist>

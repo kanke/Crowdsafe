@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SpotzSDK/SpotzSDK.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,53 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [SpotzSDK initializeWithAppId:@"rlpETa2JDBMBCjIOdydH1Odqa5iH83i7t52ieX7f" clientKey:@"eRHtE4E1OwrXdfgfj6DoQX9cLBJaOoPdzXHW9xnj" delegate:self withOptions:nil];
+    [[NSNotificationCenter defaultCenter] addObserverForName:SpotzInsideNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        if (note.object)
+        {
+            // Take out the Spotz object and its beacon
+            NSDictionary *data = note.object;
+            Spotz *spotz = data[@"spotz"];
+
+            if (data[@"beacon"])
+            {
+                SpotzBeacon *beacon = data[@"beacon"];
+                NSLog(@"Entry beacon (%@) detected with UUID: %@ major: %i minor: %i",spotz.name,beacon.uuid,beacon.major,beacon.minor);
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"It works"
+                                                                message:@":)"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+            }
+            else if (data[@"geofence"])
+            {
+                SpotzGeofence *geofence = data[@"geofence"];
+                NSLog(@"Entry geofence (%@) detected with latitude: %f longitude %f",spotz.name,geofence.latitude,geofence.longitude);
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"It works - Geofence"
+                                                                message:@":)"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+            }
+        }
+    }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:SpotzRangingNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        if (note.object)
+        {
+            NSDictionary *data = note.object;
+
+            Spotz *spotz = data[@"spotz"];
+            NSNumber *acc = data[@"accuracy"];
+
+            NSLog(@"Spotz id: %@ name: %@",spotz.id,spotz.name);
+            NSLog(@"Accuracy %@", acc);
+            
+            // Do something with this Spotz and accuracy data
+        }
+    }];
     return YES;
 }
 
@@ -40,6 +88,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - SpotzSDK delegates
+- (void)spotzSDKInitSuccessfull {
+    NSLog(@"SpotzSDK initialized successfully");
+    [SpotzSDK startServices];
+}
+
+- (void)spotzSDKInitFailed:(NSError *)error {
+    NSLog(@"Error %@",error);
 }
 
 @end
