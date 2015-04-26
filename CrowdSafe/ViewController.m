@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UITextField *searchbox;
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 - (IBAction)didPressSearchButton:(id)sender;
 
@@ -53,6 +54,40 @@
 }
 
 - (IBAction)didPressSearchButton:(id)sender {
+    //Dismiss keyboard
     [self.view endEditing:YES];
+    
+    CLGeocoder *geocoder;
+    if (!geocoder)
+        geocoder = [[CLGeocoder alloc] init];
+    NSLog(@"Starting geocode");
+    [geocoder geocodeAddressString:self.searchbox.text
+                 completionHandler:^(NSArray* placemarks, NSError* error){
+                     /*for (CLPlacemark* aPlacemark in placemarks)
+                     {
+                         CLPlacemark *place = aPlacemark[0];
+                         CLLocation *location = [place locat]
+                     }*/
+                     CLPlacemark *placemark = placemarks[0];
+                     CLLocation *loc = placemark.location;
+                     
+                     MKCoordinateRegion region;
+                     MKCoordinateSpan span;
+                     span.latitudeDelta = 0.010;
+                     span.longitudeDelta = 0.010;
+                     CLLocationCoordinate2D location;
+                     location.latitude = loc.coordinate.latitude;
+                     location.longitude = loc.coordinate.longitude;
+                     region.span = span;
+                     region.center = location;
+                     [self.mapView setRegion:region animated:YES];
+                     
+                     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+                     point.coordinate = loc.coordinate;
+                     point.title = @"70% Full";
+                     point.subtitle = self.searchbox.text;
+                     
+                     [self.mapView addAnnotation:point];
+                 }];
 }
 @end
