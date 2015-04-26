@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
+- (IBAction)didPressSearchButton:(id)sender;
 
 @end
 
@@ -44,10 +46,13 @@
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = aUserLocation.coordinate;
     point.title = @"70% Full";
-    point.subtitle = @"Cafe Italia";
+    point.subtitle = @"Cafe On Wheels";
 
     [self.mapView addAnnotation:point];
-    [self.mapView selectAnnotation:point animated:NO];
+    //[self.mapView selectAnnotation:point animated:NO];
 }
 
+- (IBAction)didPressSearchButton:(id)sender {
+    [self.view endEditing:YES];
+}
 @end
