@@ -10,6 +10,31 @@ PODS:
   - AFNetworking/Reachability (2.5.3)
   - AFNetworking/Security (2.5.3)
   - AFNetworking/Serialization (2.5.3)
+  - Braintree (3.7.0):
+    - Braintree/API (= 3.7.0)
+    - Braintree/Drop-In (= 3.7.0)
+    - Braintree/Payments (= 3.7.0)
+    - Braintree/PayPal (= 3.7.0)
+    - Braintree/UI (= 3.7.0)
+    - Braintree/Venmo (= 3.7.0)
+  - Braintree/API (3.7.0)
+  - Braintree/Drop-In (3.7.0):
+    - Braintree/API
+    - Braintree/Payments
+    - Braintree/PayPal
+    - Braintree/UI
+    - Braintree/Venmo
+  - Braintree/Payments (3.7.0):
+    - Braintree/API
+    - Braintree/PayPal
+    - Braintree/Venmo
+  - Braintree/PayPal (3.7.0):
+    - Braintree/API
+    - Braintree/UI
+  - Braintree/UI (3.7.0):
+    - Braintree/API
+  - Braintree/Venmo (3.7.0):
+    - Braintree/API
   - Realm (0.87.4):
     - Realm/Headers (= 0.87.4)
   - Realm/Headers (0.87.4)
@@ -19,6 +44,7 @@ PODS:
     - Realm (= 0.87.4)
 
 DEPENDENCIES:
+  - Braintree (= 3.7.0)
   - SpotzSDK (from `https://github.com/localz/Spotz-iOS-SDK.git`)
 
 EXTERNAL SOURCES:
@@ -32,6 +58,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Braintree: 5e722c7359ca1c4a2f46562e27a577aeb364b795
   Realm: ead712133879619b1b3bb4ad9efbcb3b61076dbf
   SpotzSDK: 183b95a10857e8e997fdad932fb9e8509120abff
 

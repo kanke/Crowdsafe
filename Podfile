@@ -4,6 +4,7 @@
 target 'CrowdSafe' do
 
 pod 'SpotzSDK', :git => 'https://github.com/localz/Spotz-iOS-SDK.git'
+pod 'Braintree', '3.7.0'
 
 end
 

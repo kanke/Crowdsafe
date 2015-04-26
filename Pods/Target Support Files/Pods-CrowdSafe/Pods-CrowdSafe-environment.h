@@ -36,6 +36,48 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_Serialization 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_Serialization 3
 
+// Braintree
+#define COCOAPODS_POD_AVAILABLE_Braintree
+#define COCOAPODS_VERSION_MAJOR_Braintree 3
+#define COCOAPODS_VERSION_MINOR_Braintree 7
+#define COCOAPODS_VERSION_PATCH_Braintree 0
+
+// Braintree/API
+#define COCOAPODS_POD_AVAILABLE_Braintree_API
+#define COCOAPODS_VERSION_MAJOR_Braintree_API 3
+#define COCOAPODS_VERSION_MINOR_Braintree_API 7
+#define COCOAPODS_VERSION_PATCH_Braintree_API 0
+
+// Braintree/Drop-In
+#define COCOAPODS_POD_AVAILABLE_Braintree_Drop_In
+#define COCOAPODS_VERSION_MAJOR_Braintree_Drop_In 3
+#define COCOAPODS_VERSION_MINOR_Braintree_Drop_In 7
+#define COCOAPODS_VERSION_PATCH_Braintree_Drop_In 0
+
+// Braintree/PayPal
+#define COCOAPODS_POD_AVAILABLE_Braintree_PayPal
+#define COCOAPODS_VERSION_MAJOR_Braintree_PayPal 3
+#define COCOAPODS_VERSION_MINOR_Braintree_PayPal 7
+#define COCOAPODS_VERSION_PATCH_Braintree_PayPal 0
+
+// Braintree/Payments
+#define COCOAPODS_POD_AVAILABLE_Braintree_Payments
+#define COCOAPODS_VERSION_MAJOR_Braintree_Payments 3
+#define COCOAPODS_VERSION_MINOR_Braintree_Payments 7
+#define COCOAPODS_VERSION_PATCH_Braintree_Payments 0
+
+// Braintree/UI
+#define COCOAPODS_POD_AVAILABLE_Braintree_UI
+#define COCOAPODS_VERSION_MAJOR_Braintree_UI 3
+#define COCOAPODS_VERSION_MINOR_Braintree_UI 7
+#define COCOAPODS_VERSION_PATCH_Braintree_UI 0
+
+// Braintree/Venmo
+#define COCOAPODS_POD_AVAILABLE_Braintree_Venmo
+#define COCOAPODS_VERSION_MAJOR_Braintree_Venmo 3
+#define COCOAPODS_VERSION_MINOR_Braintree_Venmo 7
+#define COCOAPODS_VERSION_PATCH_Braintree_Venmo 0
+
 // Realm
 #define COCOAPODS_POD_AVAILABLE_Realm
 #define COCOAPODS_VERSION_MAJOR_Realm 0

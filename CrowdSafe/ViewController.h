@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
+#import <Braintree/Braintree.h>
 
-@interface ViewController : UIViewController <MKMapViewDelegate>
+
+@interface ViewController : UIViewController <MKMapViewDelegate, BTDropInViewControllerDelegate>
 
 
 @end

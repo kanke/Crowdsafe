@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65852DA4B340C1D68D88C7D8"
+               BlueprintIdentifier = "FEDFF307D3D10289043291C1"
                BuildableName = "libPods-CrowdSafe.a"
                BlueprintName = "Pods-CrowdSafe"
                ReferencedContainer = "container:Pods.xcodeproj">

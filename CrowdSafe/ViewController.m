@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchbox;
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 - (IBAction)didPressSearchButton:(id)sender;
+- (IBAction)tappedPayButton:(id)sender;
 
 @end
 
@@ -89,5 +90,49 @@
                      
                      [self.mapView addAnnotation:point];
                  }];
+}
+
+- (IBAction)tappedPayButton:(id)sender {
+    Braintree *braintree = [Braintree braintreeWithClientToken:@"eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiI4MzUyNmE2ODAzNGQzMDI3NjQ0YTNmOTM0YzRlMzdlN2M3YWU5YTVkNDE3ZTdlZDM2OWQ2YzI1OGM3Yjk3NzA2fGNyZWF0ZWRfYXQ9MjAxNC0xMC0xMlQwOToxMzoyMC4zNjA4MTQ0NDYrMDAwMFx1MDAyNm1lcmNoYW50X2lkPWZmZHFjOWZ5ZmZuN3luMmpcdTAwMjZwdWJsaWNfa2V5PXFqNjVubmRibm42cXlqa3AiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZmZkcWM5ZnlmZm43eW4yai9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbImN2diJdLCJwYXltZW50QXBwcyI6W10sImNsaWVudEFwaVVybCI6Imh0dHBzOi8vYXBpLnNhbmRib3guYnJhaW50cmVlZ2F0ZXdheS5jb206NDQzL21lcmNoYW50cy9mZmRxYzlmeWZmbjd5bjJqL2NsaWVudF9hcGkiLCJhc3NldHNVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbSIsImF1dGhVcmwiOiJodHRwczovL2F1dGgudmVubW8uc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbSIsImFuYWx5dGljcyI6eyJ1cmwiOiJodHRwczovL2NsaWVudC1hbmFseXRpY3Muc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbSJ9LCJ0aHJlZURTZWN1cmVFbmFibGVkIjp0cnVlLCJ0aHJlZURTZWN1cmUiOnsibG9va3VwVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL2ZmZHFjOWZ5ZmZuN3luMmovdGhyZWVfZF9zZWN1cmUvbG9va3VwIn0sInBheXBhbEVuYWJsZWQiOnRydWUsInBheXBhbCI6eyJkaXNwbGF5TmFtZSI6IkNvbW1lcmNlIEZhY3RvcnkiLCJjbGllbnRJZCI6bnVsbCwicHJpdmFjeVVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS9wcCIsInVzZXJBZ3JlZW1lbnRVcmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdG9zIiwiYmFzZVVybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXNzZXRzVXJsIjoiaHR0cHM6Ly9jaGVja291dC5wYXlwYWwuY29tIiwiZGlyZWN0QmFzZVVybCI6bnVsbCwiYWxsb3dIdHRwIjp0cnVlLCJlbnZpcm9ubWVudE5vTmV0d29yayI6dHJ1ZSwiZW52aXJvbm1lbnQiOiJvZmZsaW5lIiwibWVyY2hhbnRBY2NvdW50SWQiOiI3ZHloZDk4a2cydGt3cXRkIiwiY3VycmVuY3lJc29Db2RlIjoiVVNEIn0sIm1lcmNoYW50SWQiOiJmZmRxYzlmeWZmbjd5bjJqIiwidmVubW8iOiJvZmYiLCJhcHBsZVBheSI6eyJzdGF0dXMiOiJtb2NrIiwiY291bnRyeUNvZGUiOiJVUyIsImN1cnJlbmN5Q29kZSI6IlVTRCIsIm1lcmNoYW50SWRlbnRpZmllciI6ImZmZHFjOWZ5ZmZuN3luMmotYXBwbGUtcGF5Iiwic3VwcG9ydGVkTmV0d29ya3MiOlsidmlzYSIsIm1hc3RlcmNhcmQiLCJhbWV4Il19fQ=="];
+    // Create a BTDropInViewController
+    BTDropInViewController *dropInViewController = [braintree dropInViewControllerWithDelegate:self];
+    // This is where you might want to customize your Drop in. (See below.)
+
+    // The way you present your BTDropInViewController instance is up to you.
+    // In this example, we wrap it in a new, modally presented navigation controller:
+    dropInViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                                          target:self
+                                                                                                          action:@selector(userDidCancelPayment)];
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:dropInViewController];
+    [self presentViewController:navigationController
+                       animated:YES
+                     completion:nil];
+
+}
+
+- (void)userDidCancelPayment {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)dropInViewController:(__unused BTDropInViewController *)viewController didSucceedWithPaymentMethod:(BTPaymentMethod *)paymentMethod {
+    //self.nonce = paymentMethod.nonce;
+    //[self postNonceToServer:self.nonce]; // Send payment method nonce to your server
+    //[self postNonceToServer:@"nonce"];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //self.cardNumber.text = @"4111 1111 1111 1111";
+
+}
+
+- (void)dropInViewControllerDidCancel:(__unused BTDropInViewController *)viewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //self.cardNumber.text = @"4111 1111 1111 1111";
+
+}
+
+- (void)dropInViewControllerWillComplete:(BTDropInViewController *)viewController
+{
+    //self.cardNumber.text = @"4111 1111 1111 1111";
+
 }
 @end
