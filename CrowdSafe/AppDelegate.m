@@ -30,12 +30,31 @@
             {
                 SpotzBeacon *beacon = data[@"beacon"];
                 NSLog(@"Entry beacon (%@) detected with UUID: %@ major: %i minor: %i",spotz.name,beacon.uuid,beacon.major,beacon.minor);
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"It works"
+
+                NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://obscure-woodland-6156.herokuapp.com/api/v1/update"]];
+                [request setHTTPMethod:@"POST"];
+                [NSURLConnection sendAsynchronousRequest:request
+                                                   queue:[NSOperationQueue new]
+                                       completionHandler:^(NSURLResponse *response, NSData *returnData, NSError *err) {
+                                           if(!err) {
+                                               NSString *responseData = [NSString stringWithUTF8String:[returnData bytes]];
+                                               NSLog(@"responseData: %@", responseData);
+
+
+                                            } else {
+                                               NSLog(@"Connection Problem");
+                                           }
+                                       }];
+
+
+
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!"
                                                                 message:@":)"
                                                                delegate:nil
                                                       cancelButtonTitle:@"OK"
                                                       otherButtonTitles:nil];
                 [alert show];
+
             }
             else if (data[@"geofence"])
             {

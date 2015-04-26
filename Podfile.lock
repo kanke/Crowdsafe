@@ -35,9 +35,14 @@ PODS:
     - Braintree/API
   - Braintree/Venmo (3.7.0):
     - Braintree/API
+  - libPusher (1.6):
+    - libPusher/Core (= 1.6)
+  - libPusher/Core (1.6):
+    - SocketRocket (= 0.3.1-beta2)
   - Realm (0.87.4):
     - Realm/Headers (= 0.87.4)
   - Realm/Headers (0.87.4)
+  - SocketRocket (0.3.1-beta2)
   - SpotzSDK (2.0.0.1):
     - AFNetworking/NSURLConnection (>= 2.3.0)
     - AFNetworking/NSURLSession (>= 2.3.0)
@@ -45,6 +50,7 @@ PODS:
 
 DEPENDENCIES:
   - Braintree (= 3.7.0)
+  - libPusher (~> 1.5)
   - SpotzSDK (from `https://github.com/localz/Spotz-iOS-SDK.git`)
 
 EXTERNAL SOURCES:
@@ -59,7 +65,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
   Braintree: 5e722c7359ca1c4a2f46562e27a577aeb364b795
+  libPusher: f9367ede8f5141e74adc90ba20536cbc3c7b68e1
   Realm: ead712133879619b1b3bb4ad9efbcb3b61076dbf
+  SocketRocket: 7284ab9370a06c99aba92b2fe3a32aedd0f9a6fa
   SpotzSDK: 183b95a10857e8e997fdad932fb9e8509120abff
 
 COCOAPODS: 0.35.0

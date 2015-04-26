@@ -90,10 +90,28 @@
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 87
 #define COCOAPODS_VERSION_PATCH_Realm_Headers 4
 
+// SocketRocket
+#define COCOAPODS_POD_AVAILABLE_SocketRocket
+#define COCOAPODS_VERSION_MAJOR_SocketRocket 0
+#define COCOAPODS_VERSION_MINOR_SocketRocket 3
+#define COCOAPODS_VERSION_PATCH_SocketRocket 1
+
 // SpotzSDK
 #define COCOAPODS_POD_AVAILABLE_SpotzSDK
 // This library does not follow semantic-versioning,
 // so we were not able to define version macros.
 // Please contact the author.
 // Version: 2.0.0.1.
+
+// libPusher
+#define COCOAPODS_POD_AVAILABLE_libPusher
+#define COCOAPODS_VERSION_MAJOR_libPusher 1
+#define COCOAPODS_VERSION_MINOR_libPusher 6
+#define COCOAPODS_VERSION_PATCH_libPusher 0
+
+// libPusher/Core
+#define COCOAPODS_POD_AVAILABLE_libPusher_Core
+#define COCOAPODS_VERSION_MAJOR_libPusher_Core 1
+#define COCOAPODS_VERSION_MINOR_libPusher_Core 6
+#define COCOAPODS_VERSION_PATCH_libPusher_Core 0
 

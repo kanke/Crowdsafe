@@ -29,7 +29,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CrowdSafe-SocketRocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CrowdSafe-SpotzSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CrowdSafe-libPusher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>164925D226A4751EF7860B49</key>
+		<key>026CB3A24155E28E0608C0EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>812F799CEDAB2488B5A8047E</key>
+		<key>07A30F207D470F830AD7CD2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AF333AD8AA56D345D831181</key>
+		<key>1E0F78266F52C74B525105A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9C2484C835B15F339D4A71C</key>
+		<key>3664EA17AEC18A176AA341CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3A8AC27D6B3D478DE5A7A43</key>
+		<key>6EC61B778CA95466CECBE639</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5CCA1AEE25EFD450CF5ACE3</key>
+		<key>D5CC49287A0ACE76FE59C730</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FEDFF307D3D10289043291C1</key>
+		<key>DFBCB7C986DB50D8D9A75D70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E203A3F58260186E23AFB8A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB982C3429D646FD4BCEA35E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

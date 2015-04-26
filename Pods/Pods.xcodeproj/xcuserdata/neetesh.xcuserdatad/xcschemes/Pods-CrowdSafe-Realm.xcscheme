@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3A8AC27D6B3D478DE5A7A43"
+               BlueprintIdentifier = "6EC61B778CA95466CECBE639"
                BuildableName = "libPods-CrowdSafe-Realm.a"
                BlueprintName = "Pods-CrowdSafe-Realm"
                ReferencedContainer = "container:Pods.xcodeproj">

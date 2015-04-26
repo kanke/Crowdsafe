@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
 #import <Braintree/Braintree.h>
-
+#import <Pusher/Pusher.h>
 
 @interface ViewController : UIViewController <MKMapViewDelegate, BTDropInViewControllerDelegate>
 

@@ -14,15 +14,33 @@
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 - (IBAction)didPressSearchButton:(id)sender;
 - (IBAction)tappedPayButton:(id)sender;
-
+@property PTPusher *client;
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    MKPointAnnotation *point;
+    int percent;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    percent = 70;
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
+
+
+    self.client = [PTPusher pusherWithKey:@"610c2e6be84239a23fc8" delegate:self];
+    [self.client connect];
+    PTPusherChannel *channel = [self.client subscribeToChannelNamed:@"channel"];
+    [channel bindToEventNamed:@"some-update" handleWithBlock:^(PTPusherEvent *channelEvent) {
+        // channelEvent.data is a NSDictianary of the JSON object received
+        NSLog([channelEvent.data description]);
+        percent = percent + 2;
+        NSString *title = [NSString stringWithFormat:@"%d%% Full", percent];
+        point.title = title;
+        [self.mapView addAnnotation:point];
+        [self.mapView selectAnnotation:point animated:NO];
+    }];
 
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -45,7 +63,7 @@
     region.center = location;
     [aMapView setRegion:region animated:YES];
 
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point = [[MKPointAnnotation alloc] init];
     point.coordinate = aUserLocation.coordinate;
     point.title = @"70% Full";
     point.subtitle = @"Cafe On Wheels";
@@ -83,7 +101,7 @@
                      region.center = location;
                      [self.mapView setRegion:region animated:YES];
                      
-                     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+                     point = [[MKPointAnnotation alloc] init];
                      point.coordinate = loc.coordinate;
                      point.title = @"70% Full";
                      point.subtitle = self.searchbox.text;
